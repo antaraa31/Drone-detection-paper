@@ -1,17 +1,15 @@
 Multi-Modal Drone Detection Using RF Signals and Vision-Based Deep Learning
+
 A portable real-time anti-drone detection system that combines RF signal analysis and AI-powered computer vision for reliable UAV detection in challenging environments such as border surveillance zones. The project integrates RTL-SDR, YOLOv8, FastAPI, and a real-time monitoring dashboard to improve detection accuracy and reduce false positives. 
 
 📌 Overview
+
 Unauthorized drone activities such as illegal surveillance, smuggling, and security breaches have increased significantly in recent years. Traditional single-method drone detection systems often fail in low-visibility environments or when drones operate autonomously.
 This project introduces a multi-modal sensor fusion approach that combines:
 
 
 📡 RF Signal Detection using RTL-SDR
-
-
 🎥 Vision-Based Drone Detection using YOLOv8
-
-
 🔀 Fusion-Based Decision Engine for improved reliability
 
 
@@ -20,28 +18,14 @@ The system is designed to operate in real-time under difficult environmental con
 🚀 Features
 
 
-Real-time drone detection
-
-
-RF spectrum monitoring using RTL-SDR
-
-
-AI-based visual drone detection using YOLOv8
-
-
-Fusion-based decision mechanism
-
-
-Reduced false positives
-
-
-Dashboard for live monitoring
-
-
-Modular and scalable architecture
-
-
-Low-latency communication using WebSockets
+- Real-time drone detection
+- RF spectrum monitoring using RTL-SDR
+- AI-based visual drone detection using YOLOv8
+- Fusion-based decision mechanism
+- Reduced false positives
+- Dashboard for live monitoring
+- Modular and scalable architecture
+- Low-latency communication using WebSockets
 
 
 
