@@ -7,10 +7,9 @@ A portable real-time anti-drone detection system that combines RF signal analysi
 Unauthorized drone activities such as illegal surveillance, smuggling, and security breaches have increased significantly in recent years. Traditional single-method drone detection systems often fail in low-visibility environments or when drones operate autonomously.
 This project introduces a multi-modal sensor fusion approach that combines:
 
-
-📡 RF Signal Detection using RTL-SDR
-🎥 Vision-Based Drone Detection using YOLOv8
-🔀 Fusion-Based Decision Engine for improved reliability
+- RF Signal Detection using RTL-SDR
+- Vision-Based Drone Detection using YOLOv8
+- Fusion-Based Decision Engine for improved reliability
 
 
 The system is designed to operate in real-time under difficult environmental conditions. 
@@ -30,41 +29,30 @@ The system is designed to operate in real-time under difficult environmental con
 
 
 🛠️ Technologies Used
+
+
 Hardware
 
+   -RTL-SDR Module
 
-RTL-SDR Module
-
-
-Camera Module
-
-
-Laptop / PC Processing Unit
+   -Camera Module
 
 
 Software & Frameworks
 
+   -Python
 
-Python
+   -YOLOv8
 
+   -OpenCV
 
-YOLOv8
+   -FastAPI
 
+   -React.js
 
-OpenCV
+   -Plotly
 
-
-FastAPI
-
-
-React.js
-
-
-Plotly
-
-
-WebSockets
-
+   -WebSockets
 
 FFT Signal Processing
 
@@ -72,130 +60,104 @@ FFT Signal Processing
 
 🧠 System Architecture
 The system works in parallel through two detection pipelines:
+
+
 1️⃣ RF Detection Module
-
-
 Captures RF signals from drone communication bands
-
-
 Performs:
 
+    -FFT (Fast Fourier Transform)
 
-FFT (Fast Fourier Transform)
+    -PSD Analysis
 
+    -Peak Detection
 
-PSD Analysis
-
-
-Peak Detection
-
-
-
-
-Identifies suspicious signal activity
+    -Identifies suspicious signal activity
 
 
 2️⃣ Vision Detection Module
 
+    -Captures real-time video feed
 
-Captures real-time video feed
+    -YOLOv8 detects drones visually
 
-
-YOLOv8 detects drones visually
-
-
-Applies confidence filtering and validation
+    -Applies confidence filtering and validation
 
 
 3️⃣ Fusion Engine
+
 Combines outputs from RF and vision modules:
-RF DetectionVision DetectionOutputYesYesConfirmed DroneYesNoPossible RF ActivityNoYesVisual DetectionNoNoNo Threat
+
+    RF Detection   Vision   DetectionOutput
+
+    Yes            Yes      Confirmed Drone
+
+    Yes            No       Possible RF Activity
+
+    No             Yes      Visual Detection
+
+    No             No       No Threat
 
 📊 Results
 The proposed fusion-based approach achieved:
 
 
-✅ Approx. 94% detection accuracy
+    ✅ Approx. 94% detection accuracy
 
 
-✅ Reduced false positives
+    ✅ Reduced false positives
 
 
-✅ Reliable real-time performance
+    ✅ Reliable real-time performance
 
 
-✅ Improved robustness in difficult environments
+    ✅ Improved robustness in difficult environments
 
 
 Experimental testing showed better performance compared to standalone RF-only or vision-only systems. 
 
 📷 Dashboard Output
+
 The system dashboard includes:
 
-
-Live annotated drone detection feed
-
-
-RF spectrum visualization
-
-
-Detection status updates
-
-
-Real-time monitoring interface
-
-
+    -Live annotated drone detection feed
+    -RF spectrum visualization
+    -Detection status updates
+    -Real-time monitoring interface
 
 ⚠️ Challenges Faced
 
 
-RF noise filtering
-
-
-Latency during simultaneous processing
-
-
-Synchronization between RF and vision modules
-
-
-False detections in cluttered backgrounds
-
-
-Low-light environmental conditions
+    -RF noise filtering
+    -Latency during simultaneous processing
+    -Synchronization between RF and vision modules
+    -False detections in cluttered backgrounds
+    -Low-light environmental conditions
 
 
 These challenges were addressed using:
 
+-Threshold filtering
 
-Threshold filtering
+-Confidence validation
 
+-Optimized FFT execution
 
-Confidence validation
-
-
-Optimized FFT execution
-
-
-Fusion-based asynchronous decision logic
+-Fusion-based asynchronous decision logic
 
 
+Future Work
 
-🔮 Future Work
 Future improvements may include:
 
+    -RF Jamming techniques
 
-RF Jamming techniques
+    -GNSS Spoofing detection
 
+    -Advanced signal manipulation detection
 
-GNSS Spoofing detection
+    -Edge deployment optimization
 
-
-Advanced signal manipulation detection
-
-
-Edge deployment optimization
-
-
-Enhanced autonomous drone tracking
+    -Enhanced autonomous drone tracking
 
 
